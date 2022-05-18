@@ -1,0 +1,66 @@
+*{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.td1{
+    background-color: black;
+}
+
+.td2{
+    background: rgb(185, 185, 185);
+}
+
+td{
+    padding: 1px 1px 20px 20px;
+    margin: 0%;
+}
+
+
+.im1{
+    border: 2px solid;
+    text-align: right;
+    width: 120px;
+    height: 100px;
+    margin: 1px 1px 1px 455px;
+
+}
+
+.im2{
+    border: 2px solid;
+    text-align: center;
+    width: 120px;
+    height: 100px;
+    margin: 1px 1px 1px 1px;
+
+
+}
+
+.im3{
+    border: 2px solid;
+    text-align: right;
+    width: 120px;
+    height: 100px;
+    margin: 1px 1px 1px 1px;
+
+}
+
+h2{
+    color: white;
+    text-align: left;
+    margin: 0%;
+    text-align: center;
+    padding: 5px 5px 20px 5px;
+}
+
+h3{
+    text-align: left;
+    background: rgb(185, 185, 185);
+    margin: 0%;
+    text-align: center;
+    padding: 5px 5px 20px 5px;
+}
+
+.pp{
+    background-color: red;
+}
+

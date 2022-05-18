@@ -1,0 +1,186 @@
+<DOCTYPE HTML>
+    <html lang="es">
+        <head>
+            <title>Transito</title>
+            <link rel="stylesheet" href="style2.css" />
+            <meta charset="UTF-8">
+        </head>
+        <body>
+            <table border="1">
+                <tr>
+                    <td class="td1">
+                        <h2>Ministerio de Transporte</h2>
+                        <img src= "./transito.jpg">
+                        <img src= "./escudo.jpg" >
+                        <img src= "./runt.jpg">
+                    </td>
+                </tr>
+            </table>
+            <form action="" enctype="multipart/form-data">
+                <table border="1">
+                    <tr>
+                        <td>
+                            <h3>Tramite Solicitado</h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="tramite" value="registo">Registro Matricula</td>
+                        <td><input type="radio" name="tramite" value="traspaso">Traspaso</td>
+                        <td><input type="radio" name="tramite" value="traslado">Traslado Matricula</td>
+                        <td><input type="radio" name="tramite" value="radicado">Radicado Matricula</td>
+                        <td><input type="radio" name="tramite" value="color">Cambio Color</td>
+                        <td><input type="radio" name="tramite" value="servicio">Cambio Servicio</td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="tramite" value="motor">Regrabar Motor</td>
+                        <td><input type="radio" name="tramite" value="chasis">Regrabar Chasis</td>
+                        <td><input type="radio" name="tramite" value="transformacion">Transformacion</td>
+                        <td><input type="radio" name="tramite" value="duplicado">Duplicado Licencia Transito</td>
+                        <td><input type="radio" name="tramite" value="inscripcion">Inscripcion Prenda</td>
+                        <td><input type="radio" name="tramite" value="levantar">Levantar Prenda</td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="tramite" value="cancelar">Cancelacion Matricula</td>
+                        <td><input type="radio" name="tramite" value="placas">Cambio Placas</td>
+                        <td><input type="radio" name="tramite" value="duplicado">Duplicado Placas</td>
+                        <td><input type="radio" name="tramite" value="rematricula">Rematricula</td>
+                        <td><input type="radio" name="tramite" value="carroceria">Cambio Carroceria</td>
+                        <td><input type="radio" name="tramite" value="otros">Otros</td>
+                    </tr>
+                </table>
+                <table border="1">
+                    <tr>
+                        <td>
+                            <h3>Clase de Vehiculo</h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="clase" value="automovil">Automovil</td>
+                        <td><input type="radio" name="clase" value="bus">Bus</td>
+                        <td><input type="radio" name="clase" value="buseta">BUseta</td>
+                        <td><input type="radio" name="clase" value="camion">Camion</td>
+                        <td><input type="radio" name="clase" value="camioneta">Camioneta</td>
+                        <td><input type="radio" name="clase" value="campero">Campero</td>
+                        <td><input type="radio" name="clase" value="microbus">Microbus</td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="clase" value="tractocamion">Tractocamion</td>
+                        <td><input type="radio" name="clase" value="motocicleta">Motocicleta</td>
+                        <td><input type="radio" name="clase" value="motocarro">Motocarro</td>
+                        <td><input type="radio" name="clase" value="mototriciclo">Mototriciclo</td>
+                        <td><input type="radio" name="clase" value="cuatrimoto">Cuatrimoto</td>
+                        <td><input type="radio" name="clase" value="volqueta">Volqueta</td>
+                        <td><input type="radio" name="clase" value="otros">Otros</td>
+                    </tr>
+                </table>
+                <table border="1">
+                    <tr>
+                        <td>
+                            <h3>Datos del Propietario</h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="apellido">Primer Apellido</label>
+                            <input type="text" name="apellido" placeholder="Primer Apellido"/>
+                        </td>
+                        <td>
+                            <label for="apellido">Segundo Apellido</label>
+                            <input type="text" name="apellido" placeholder="Segundo Apellido"/>
+                        </td>
+                        <td>
+                            <label for="nombre">Nombres</label>
+                            <input type="text" name="nombre" placeholder="Nombres"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="documento" value="cedula">C.C</td>
+                        <td><input type="radio" name="documento" value="nit">NIT</td>
+                        <td><input type="radio" name="documento" value="nn">N.N</td>
+                        <td><input type="radio" name="documento" value="pasaporte">Pasaporte</td>
+                        <td><input type="radio" name="documento" value="extranjera">C.Extranjera</td>
+                        <td><input type="radio" name="documento" value="targeta">Targeta Identidad</td>
+                        <td><input type="radio" name="documento" value="nuip">NUIP</td>                        <td><input type="radio" name="documento" value="diplomatico">C.Diplomatica</td>
+                        <td>
+                            <label for="documento">Número Documento</label>
+                            <input type="number" name="documento" placeholder="Numero">
+                        </td> 
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="direcion">Direccion</label>
+                            <input type="text" name="direccion" placeholder="Direccion"/>
+                        </td>
+                        <td>
+                            <label for="ciudad">Ciudad</label>
+                            <input type="text" name="ciudad" placeholder="Ciudad"/>
+                        </td>
+                        <td>
+                            <label for="numero">Número</label>
+                            <input type="number" name="numero" placeholder="Número"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="firma">Firma</label>
+                            <textarea name="firma" placeholder="Firma del Propietario"></textarea>
+                        </td>
+                    </tr>
+                </table>
+                <table border="1">
+                    <tr>
+                        <td>
+                            <h3>Datos del Comprador (Traspaso)</h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="apellido">Primer Apellido</label>
+                            <input type="text" name="apellido" placeholder="Primer Apellido"/>
+                        </td>
+                        <td>
+                            <label for="apellido">Segundo Apellido</label>
+                            <input type="text" name="apellido" placeholder="Segundo Apellido"/>
+                        </td>
+                        <td>
+                            <label for="nombre">Nombres</label>
+                            <input type="text" name="nombre" placeholder="Nombres"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="documento" value="cedula">C.C</td>
+                        <td><input type="radio" name="documento" value="nit">NIT</td>
+                        <td><input type="radio" name="documento" value="nn">N.N</td>
+                        <td><input type="radio" name="documento" value="pasaporte">Pasaporte</td>
+                        <td><input type="radio" name="documento" value="extranjera">C.Extranjera</td>
+                        <td><input type="radio" name="documento" value="targeta">Targeta Identidad</td>
+                        <td><input type="radio" name="documento" value="nuip">NUIP</td>                        <td><input type="radio" name="documento" value="diplomatico">C.Diplomatica</td>
+                        <td>
+                            <label for="documento">Número Documento</label>
+                            <input type="number" name="documento" placeholder="Numero">
+                        </td> 
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="direcion">Direccion</label>
+                            <input type="text" name="direccion" placeholder="Direccion"/>
+                        </td>
+                        <td>
+                            <label for="ciudad">Ciudad</label>
+                            <input type="text" name="ciudad" placeholder="Ciudad"/>
+                        </td>
+                        <td>
+                            <label for="numero">Número</label>
+                            <input type="number" name="numero" placeholder="Número"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="firma">Firma</label>
+                            <textarea name="firma" placeholder="Firma del Comprador"></textarea>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </body>
+    </html>
