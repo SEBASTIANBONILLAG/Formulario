@@ -20,54 +20,55 @@
  $numerocom = $_POST['numero2'];
  $firmacom = $_POST['firma2'];
 */
+print_r($_POST);
 
 $errores = false;
 
 if(empty($_POST['tramite'])){
-    $error = true;
+    $errores = true;
 }
 
 
 if(empty($_POST['clase'])){
-    $error = true;
+    $errores = true;
 }
 
 
 if(empty($_POST['apellido1'])){
-    $error = true;
+    $errores = true;
 }
 
 
 if(empty($_POST['apellido2'])){
-    $error = true;
+    $errores = true;
 }
 
 
 if(empty($_POST['nombre1'])){
-    $error = true;
+    $errores = true;
 }
 
 
 if(empty($_POST['tipodoc1'])){
-    $error = true;
+    $errores = true;
 }
 
 
 
 if(empty($_POST['documento1'])){
-    $error = true;
+    $errores = true;
 }
 
 
 
 if(empty($_POST['direccion1'])){
-    $error = true;
+    $errores = true;
 }
 
 
 
 if(empty($_POST['ciudad1'])){
-    $error = true;
+    $errores = true;
 }
 
 
@@ -79,61 +80,61 @@ if(empty($_POST['telefono1'])){
 
 
 if(empty($_POST['firma1'])){
-    $error = true;
+    $errores = true;
 }
 
 
 
 if(empty($_POST['apellido3'])){
-    $error = true;
+    $errores = true;
 }
 
 
 
 if(empty($_POST['apellido4'])){
-    $error = true;
+    $errores = true;
 }
 
 
 
 if(empty($_POST['nombre2'])){
-    $error = true;
+    $errores = true;
 }
 
 
 
 if(empty($_POST['tipodoc2'])){
-    $error = true;
+    $errores = true;
 }
 
 
 
 if(empty($_POST['documento2'])){
-    $error = true;
+    $errores = true;
 }
 
 
 
 if(empty($_POST['direccion2'])){
-    $error = true;
+    $errores = true;
 }
 
 
 
 if(empty($_POST['ciudad2'])){
-    $error = true;
+    $errores = true;
 }
 
 
 
 if(empty($_POST['telefono2'])){
-    $error = true;
+    $errores = true;
 }
 
 
 
 if(empty($_POST['firma2'])){
-    $error = true;
+    $errores = true;
 }
 if($errores){
     header("Location:index.php");
@@ -182,7 +183,8 @@ if($errores){
                     Numero de Documento del Propietario es: <?php echo $_POST['documento1']?><br>
                     Direccion del Propietario es: <?php echo $_POST['direccion1']?><br>
                     Ciudad de Residencia del Propietario es: <?php echo $_POST['ciudad1']?><br>
-                    Número de Telefono del Propietario es: <?php echo $_POST['numero1']?><br>
+                    Departamento de Residencia del Propietario es: <?php echo $_POST['departamento1']?><br>
+                    Número de Telefono del Propietario es: <?php echo $_POST['telefono1']?><br>
                     Firma del Propietario: <?php echo $_POST['firma1']?>
                 </p>
             </div>
@@ -200,8 +202,9 @@ if($errores){
                     Tipo de Documento del Comprador es: <?php echo $_POST['tipodoc2']?><br>
                     Numero de Documento del Comprador es: <?php echo $_POST['documento2']?><br>
                     Direccion del Comprador es: <?php echo $_POST['direccion2']?><br>
+                    Departamento de Residencia del Comprador es: <?php echo $_POST['departamento2']?><br>
                     Ciudad de Residencia del Comprador es: <?php echo $_POST['ciudad2']?><br>
-                    Número de Telefono del Comprador es: <?php echo $_POST['numero2']?><br>
+                    Número de Telefono del Comprador es: <?php echo $_POST['telefono2']?><br>
                     Firma del Comprador: <?php echo $_POST['firma2']?>
                 </p>
             </div>
