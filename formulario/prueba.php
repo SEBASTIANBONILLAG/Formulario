@@ -1,5 +1,7 @@
 <?php 
 
+
+
 $servidor = "db";
 $nombreUsuario = "db";
 $password = "db";
@@ -8,17 +10,7 @@ $db = "db";
 
 $conexion = mysqli_connect($servidor, $nombreUsuario, $password, $db );
 
-$sql = "SELECT * FROM mun";
-$resultado = $conexion->query($sql);
 
-/*if($resultado->num_rows >0){
-    while($row = $resultado->fetch_assoc()){
-        echo '<pre>';
-        print_r;
-        echo '</pre>';
-    }
-}
-*/
 ?>
 
 <DOCTYPE HTML>
@@ -32,27 +24,60 @@ $resultado = $conexion->query($sql);
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,500&display=swap" rel="stylesheet">
     </head>
     <body>
-        <form name="prueba" method="post">
-            <select name="prueba">
-                <option value="">IRA</option>
-                <option value="">GULA</option>
-                <option value="">PEREZA</option>
-                <option value="">AVARICIA</option>
-                <option value="">ORGULLO</option>
-                <option value="">ENVIDIA</option>
-                <option value="">LUJURIA</option>
-            </select>
 
-            <select name="departamento1">
-                <option value=""> seleccione una Ciudad</option>
-                <?php if($resultado->num_rows >0){ ?>
-                <?php while($row = $resultado->fetch_assoc()){ ?>
-                   <option value=''> <?php echo $row['Municipio']; 
+        <?php
+        $sql = "SELECT * FROM dep";
+        $resultado = $conexion->query($sql);
+        ?>
+
+        <form name="departamento" method="post">
+
+
+            <select onchange='this.form.submit()'  name="departamento">
+                <option value=""  > seleccione un Departamento</option>
+                <?php if($resultado->num_rows >0){ 
+                      while($row = $resultado->fetch_assoc()){ 
+                ?>
+                   <option value='<?php echo $row['id_departamento'];?>' 
+                   <?php if($_POST['departamento'] == $row['id_departamento']) echo "selected"?> > <?php echo $row['departamentos']; 
+                    }
+                }
+                
+                ?>
+                </option>
+            </select>
+        <?php echo $_POST['departamento']; ?>
+        <br>
+        <br>
+        
+        <?php if(!empty($_POST['departamento'])){
+            
+            $sql = "SELECT * FROM mun";
+            $resultado = $conexion->query($sql);
+            
+        ?>
+            <select name="municipio">
+                <option value="">seleccione su ciudad</option>
+                <?php if($resultado->num_rows >0){
+                    while($row = $resultado->fetch_assoc()){
+                ?>
+                <option value='<?php echo $row['municipios']; ?>' <?php if($_POST['municipio'] == $row['municipios']) echo "selected"?> 
+                > <?php echo $row['municipios'];
+                
                     }
                 }
                 ?> </option>
             </select>
-
+            <?php echo $_POST['municipio']; ?>
+            <br>
+            <input type="submit" value="Enviar">
         </form>
+        <?php    
+        }
+        else{
+            echo 'todo esta MAL!!';
+        } 
+        ?>
+
     </body>
 </html>
