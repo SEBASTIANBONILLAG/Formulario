@@ -16,7 +16,7 @@ $conexion = mysqli_connect($servidor, $nombreUsuario, $password, $db );
 <DOCTYPE HTML>
 <html lang="es">
     <head>
-        <title>prueba</title>
+        <title>borrador</title>
         <link rel="stylesheet" href="style.css" />
         <meta charset="UTF-8">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -57,8 +57,10 @@ $conexion = mysqli_connect($servidor, $nombreUsuario, $password, $db );
         <br>
         
         <?php if(!empty($_POST['departamento'])){
-            
-            $sql = "SELECT * FROM mun";
+            $municipios = $_POST['municipio'];
+
+            $sql = "SELECT * FROM mun
+            where id_departamento = '$municipios'";
             $resultado = $conexion->query($sql);
             
         ?>
@@ -67,14 +69,14 @@ $conexion = mysqli_connect($servidor, $nombreUsuario, $password, $db );
                 <?php if($resultado->num_rows >0){
                     while($row = $resultado->fetch_assoc()){
                 ?>
-                <option value='<?php echo $row['municipios']; ?>' <?php if($_POST['municipio'] == $row['municipios']) echo "selected"?> 
+                <option value='<?php echo $row['municipios']; ?>' <?php if($municipios == $row['municipios']) echo "selected"?> 
                 > <?php echo $row['municipios'];
                 
                     }
                 }
                 ?> </option>
             </select>
-            <?php echo $_POST['municipio']; ?>
+            <?php echo $municipios; ?>
             <br>
             <input type="submit" value="Enviar">
         </form>
@@ -83,7 +85,9 @@ $conexion = mysqli_connect($servidor, $nombreUsuario, $password, $db );
         else{
             echo 'todo esta MAL!!';
         } 
+
         ?>
+
 
     </body>
 </html>
